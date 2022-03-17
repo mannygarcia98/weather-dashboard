@@ -1,0 +1,12 @@
+.btn-blue {
+  background-color: #4a8df1;
+  color: white;
+}
+
+.btn-light {
+  background-color: rgb(194, 194, 194);
+}
+
+.bg-blue {
+  background-image: linear-gradient(to right, #404be0, rgb(8, 0, 119));
+}
