@@ -17,8 +17,10 @@
         <section class="col-5 col-md-2">
           <div class="row gy-2">
             <h2 class="col-12">Search for a City:</h2>
-            <input type="text" class="form-control col-12 border border-dark" placeholder="San Diego" />
-            <button class="btn btn-blue">Search</button>
+            <form id="city-form">
+              <input name="userCity" id="userCity" type="text" class="form-control col-12 border border-dark" placeholder="San Diego" />
+              <button id="search" class="btn btn-blue" type="submit">Search</button>
+            </form>
             <hr />
             <button class="btn btn-light">Austin</button>
             <button class="btn btn-light">Chicago</button>
@@ -38,6 +40,45 @@
             <p>Humidity:</p>
             <p>UV Index:</p>
           </div>
+          
+            <h2>5-Day Forecast</h2>
+            <div class="row">
+              <div class="d-flex justify-content-between">
+                <div class="p-4 bg-light">
+                  <p>3/18/2022</p>
+                  <p>Temp: 80</p>
+                  <p>Wind: 5mph nw</p>
+                  <p>Humidity: 372</p>
+                </div>
+                <div class="p-4 bg-light">
+                  <p>3/18/2022</p>
+                  <p>Temp: 80</p>
+                  <p>Wind: 5mph nw</p>
+                  <p>Humidity: 372</p>
+                </div>
+                <div class="p-4 bg-light">
+                  <p>3/18/2022</p>
+                  <p>Temp: 80</p>
+                  <p>Wind: 5mph nw</p>
+                  <p>Humidity: 372</p>
+                </div>
+                <div class="p-4 bg-light">
+                  <p>3/18/2022</p>
+                  <p>Temp: 80</p>
+                  <p>Wind: 5mph nw</p>
+                  <p>Humidity: 372</p>
+                </div>
+                <div class="p-4 bg-light">
+                  <p>3/18/2022</p>
+                  <p>Temp: 80</p>
+                  <p>Wind: 5mph nw</p>
+                  <p>Humidity: 372</p>
+                </div>
+
+              </div>
+            </div>
+            </div>
+          
         </section>
       </div>
     </div>
