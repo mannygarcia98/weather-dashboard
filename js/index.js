@@ -1,27 +1,29 @@
 var cityFormEl = document.querySelector("#city-form");
 var cityInputEl = document.querySelector("#userCity");
-var apiKey = "ddcf58abee794b9b038a7f587d591c85";
 
-var cityName = "Harlingen";
-function getWeather() {
-  fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=ddcf58abee794b9b038a7f587d591c85")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
+var getCurrentWeather = function (city) {
+  var currWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + city + "&appid=ddcf58abee794b9b038a7f587d591c85";
+  fetch(currWeatherUrl).then(function (response) {
+    response.json().then(function (data) {
       console.log(data);
-      console.log(data.coord.lat);
-      var lat = data.coord.lat;
-      var lon = data.coord.lon;
-      console.log(lat, lon);
-      console.log(data.coord.lon);
     });
-}
-getWeather();
+  });
+};
+
+// getCurrentWeather("harlingen");
 
 var formSubmitHandler = function (event) {
   event.preventDefault();
   console.log(event);
+  var cityName = cityInputEl.value.trim();
+
+  if (cityName) {
+    getCurrentWeather(cityName);
+    cityInputEl.value = "";
+    $("#userCity").attr("placeholder", cityName);
+  } else {
+    $("#userCity").attr("placeholder", "Please enter a valid city name.");
+  }
 };
 
 cityFormEl.addEventListener("submit", formSubmitHandler);

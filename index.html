@@ -12,76 +12,75 @@
     <header>
       <h1 class="text-center bg-blue text-white py-2">Weather Dashboard</h1>
     </header>
-    <div class="m-3">
-      <div class="row">
-        <section class="col-5 col-md-2">
-          <div class="row gy-2">
-            <h2 class="col-12">Search for a City:</h2>
-            <form id="city-form">
-              <input name="userCity" id="userCity" type="text" class="form-control col-12 border border-dark" placeholder="San Diego" />
-              <button id="search" class="btn btn-blue" type="submit">Search</button>
-            </form>
+    <main class="row flex-row justify-space-between m-2">
+      <div class="col-5 col-md-3">
+        <div class="row">
+          <h2 class="col-12 h3">Search for a City:</h2>
+          <form id="city-form" class="col-12">
+            <input name="userCity" id="userCity" type="text" class="form-control col-12 border border-dark" placeholder="San Diego" />
+            <button id="search" class="btn btn-blue mt-2 col-12" type="submit">Search</button>
             <hr />
-            <button class="btn btn-light">Austin</button>
-            <button class="btn btn-light">Chicago</button>
-            <button class="btn btn-light">New York</button>
-            <button class="btn btn-light">Orlando</button>
-            <button class="btn btn-light">San Francisco</button>
-            <button class="btn btn-light">Seattle</button>
-            <button class="btn btn-light">Denver</button>
-            <button class="btn btn-light">Atlanta</button>
-          </div>
-        </section>
-        <section class="col-7 col-md-10">
-          <div class="container border border-dark p-1">
-            <h2>City Name (M/DD/YYYY)</h2>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-            <p>UV Index:</p>
-          </div>
-          
-            <h2>5-Day Forecast</h2>
-            <div class="row">
-              <div class="d-flex justify-content-between">
-                <div class="p-4 bg-light">
-                  <p>3/18/2022</p>
-                  <p>Temp: 80</p>
-                  <p>Wind: 5mph nw</p>
-                  <p>Humidity: 372</p>
-                </div>
-                <div class="p-4 bg-light">
-                  <p>3/18/2022</p>
-                  <p>Temp: 80</p>
-                  <p>Wind: 5mph nw</p>
-                  <p>Humidity: 372</p>
-                </div>
-                <div class="p-4 bg-light">
-                  <p>3/18/2022</p>
-                  <p>Temp: 80</p>
-                  <p>Wind: 5mph nw</p>
-                  <p>Humidity: 372</p>
-                </div>
-                <div class="p-4 bg-light">
-                  <p>3/18/2022</p>
-                  <p>Temp: 80</p>
-                  <p>Wind: 5mph nw</p>
-                  <p>Humidity: 372</p>
-                </div>
-                <div class="p-4 bg-light">
-                  <p>3/18/2022</p>
-                  <p>Temp: 80</p>
-                  <p>Wind: 5mph nw</p>
-                  <p>Humidity: 372</p>
-                </div>
-
-              </div>
-            </div>
-            </div>
-          
-        </section>
+            <button class="btn btn-light col-12">Austin</button>
+            <button class="btn btn-light col-12 mt-2">Chicago</button>
+            <button class="btn btn-light col-12 mt-2">New York</button>
+            <button class="btn btn-light col-12 mt-2">Orlando</button>
+            <button class="btn btn-light col-12 mt-2">San Francisco</button>
+            <button class="btn btn-light col-12 mt-2">Seattle</button>
+            <button class="btn btn-light col-12 mt-2">Denver</button>
+            <button class="btn btn-light col-12 mt-2">Atlanta</button>
+          </form>
+        </div>
       </div>
-    </div>
+      <div class="col-7 col-md-9">
+        <div class="container border border-dark rounded p-1">
+          <h2 class="h3">City Name (M/DD/YYYY)</h2>
+          <p>Temp:</p>
+          <p>Wind:</p>
+          <p>Humidity:</p>
+          <p>UV Index:</p>
+        </div>
+        <div class="forecast mt-3">
+          <h3 class="h4">5-Day Forecast:</h3>
+          <div class="row flex-row justify-space-between">
+            <div class="card col mx-2 bg-dark-blue">
+              <h4 class="card-title h5 text-white">3/18/2022</h4>
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon" /></div>
+              <p class="text-white">Temp: 80</p>
+              <p class="text-white">Wind: 5mph nw</p>
+              <p class="text-white">Humidity: 372</p>
+            </div>
+            <div class="card col mx-2 bg-dark-blue">
+              <h4 class="card-title h5 text-white">3/18/2022</h4>
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon" /></div>
+              <p class="text-white">Temp: 80</p>
+              <p class="text-white">Wind: 5mph nw</p>
+              <p class="text-white">Humidity: 372</p>
+            </div>
+            <div class="card col mx-2 bg-dark-blue">
+              <h4 class="card-title h5 text-white">3/18/2022</h4>
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon" /></div>
+              <p class="text-white">Temp: 80</p>
+              <p class="text-white">Wind: 5mph nw</p>
+              <p class="text-white">Humidity: 372</p>
+            </div>
+            <div class="card col mx-2 bg-dark-blue">
+              <h4 class="card-title h5 text-white">3/18/2022</h4>
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon" /></div>
+              <p class="text-white">Temp: 80</p>
+              <p class="text-white">Wind: 5mph nw</p>
+              <p class="text-white">Humidity: 372</p>
+            </div>
+            <div class="card col mx-2 bg-dark-blue">
+              <h4 class="card-title h5 text-white">3/18/2022</h4>
+              <div id="icon"><img id="wicon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon" /></div>
+              <p class="text-white">Temp: 80</p>
+              <p class="text-white">Wind: 5mph nw</p>
+              <p class="text-white">Humidity: 372</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

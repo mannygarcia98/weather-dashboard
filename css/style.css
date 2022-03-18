@@ -1,5 +1,5 @@
 .btn-blue {
-  background-color: #4a8df1;
+  background-color: #5aa2e9;
   color: white;
 }
 
@@ -8,5 +8,9 @@
 }
 
 .bg-blue {
-  background-image: linear-gradient(to right, #404be0, rgb(8, 0, 119));
+  background-image: linear-gradient(to right, #3b6ec4, #230455);
+}
+
+.bg-dark-blue {
+  background-color: #33475a;
 }

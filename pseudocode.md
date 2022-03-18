@@ -22,10 +22,12 @@ A user will type in the name of a city and expect my site to display current wea
 
 ## Main focus
 
-### Pass variables to use in secon function
+### Pass variables to use in second function
 
 1. call both apis and get the second api to receive the lat and lon values.
 
 ### Get the weather to display on just the top section before the end of the day
 
 2.
+
+https://openweathermap.org/img/w/{weathericonid}.png
