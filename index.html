@@ -16,10 +16,13 @@
       <div class="col-5 col-md-3">
         <div class="row">
           <h2 class="col-12 h3">Search for a City:</h2>
-          <form id="city-form" class="col-12">
+          <form id="city-search" class="col-12 mb-3">
             <input name="userCity" id="userCity" type="text" class="form-control col-12 border border-dark" placeholder="San Diego" />
-            <button id="search" class="btn btn-blue mt-2 col-12" type="submit">Search</button>
-            <hr />
+            <button id="search" class="btn btn-blue mt-2 col-12">Search</button>
+          </form>
+          <hr />
+
+          <form id="city-choice">
             <button class="btn btn-light col-12">Austin</button>
             <button class="btn btn-light col-12 mt-2">Chicago</button>
             <button class="btn btn-light col-12 mt-2">New York</button>
@@ -33,11 +36,12 @@
       </div>
       <div class="col-7 col-md-9">
         <div class="container border border-dark rounded p-1">
-          <h2 class="h3">City Name (M/DD/YYYY)</h2>
-          <p>Temp:</p>
-          <p>Wind:</p>
-          <p>Humidity:</p>
-          <p>UV Index:</p>
+          <span class="h3" id="selected-city">Current City</span>
+          <span id="current-date" class="h3"></span>
+          <p id="current-temp">Temp:</p>
+          <p id="current-wind">Wind:</p>
+          <p id="current-humidity">Humidity:</p>
+          <p id="current-uv">UV Index:</p>
         </div>
         <div class="forecast mt-3">
           <h3 class="h4">5-Day Forecast:</h3>
@@ -85,6 +89,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
