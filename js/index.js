@@ -20,22 +20,24 @@ var getCurrentWeather = function (city) {
     response.json().then(function (data) {
       console.log(data);
       displayCurrWeather(data);
+      getForecast(data);
     });
   });
 };
 
-var getForecast = function () {
+var getForecast = function (currWeather) {
   //hardcoded lat and lon to test
-  var lat = 26.1906;
-  var lon = -97.6961;
-  var oneCallUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=ddcf58abee794b9b038a7f587d591c85";
+  var lat = currWeather.coord.lat;
+  var lon = currWeather.coord.lon;
+  // var lat = currWeather
+  var oneCallUrl = "https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + lat + "&lon=" + lon + "&appid=ddcf58abee794b9b038a7f587d591c85";
   fetch(oneCallUrl).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
     });
   });
 };
-getForecast();
+// getForecast();
 // getCurrentWeather("harlingen");
 
 var formSubmitHandler = function (event) {

@@ -31,3 +31,6 @@ A user will type in the name of a city and expect my site to display current wea
 2.
 
 https://openweathermap.org/img/w/{weathericonid}.png
+
+TODO
+get all of the weather data from one call. Use the first api only for getting lat and lon.
