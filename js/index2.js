@@ -3,7 +3,8 @@ var cityFormEl = document.querySelector("#city-search");
 var momentDate = moment().format("MM/DD/YYYY");
 var currentDateEl = document.querySelector("#current-date");
 currentDateEl.textContent = "(" + momentDate + ")";
-
+//save the city name to local storage in submit handler function
+//get cityName from local storage and pass it into the current weather api only if its truthy
 var formSubmitHandler = function (event) {
   var cityInputEl = document.querySelector("#userCity");
 
@@ -40,7 +41,6 @@ var getWeather = function (lat, lon) {
   var oneCallUrl = "https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + lat + "&lon=" + lon + "&appid=ddcf58abee794b9b038a7f587d591c85";
   fetch(oneCallUrl).then(function (response) {
     response.json().then(function (data) {
-      console.log(data);
       displayWeather(data);
     });
   });
@@ -69,38 +69,26 @@ var displayWeather = function (data) {
 };
 
 var displayForecast = function (data) {
-  console.log(data);
   for (i = 1; i < 6; i++) {
+    var forecast = data.daily[i];
     var forecastDate = moment().add(i, "d").format("MM/DD/YYYY");
-    console.log(forecastDate);
-    var date = document.querySelector("#day" + i);
-    console.log(date);
-
-    date.textContent = forecastDate;
-    // console.log(data.daily.i);
-    console.log(data.daily[i]);
-    console.log(forecastDate);
+    var dateEL = document.querySelector("#day" + i);
+    var imgEl = document.querySelector("#icon-day" + i);
+    var tempEl = document.querySelector("#temp-day" + i);
+    var windEl = document.querySelector("#wind-day" + i);
+    var humidityEl = document.querySelector("#humidity-day" + i);
+    dateEL.textContent = forecastDate;
+    imgEl.src = "https://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png";
+    tempEl.textContent = forecast.feels_like.day;
+    windEl.textContent = forecast.wind_speed;
+    humidityEl.textContent = forecast.humidity;
   }
 };
 
-// $(".day").each(function () {
-//   var daysOut = parseInt($(this).attr("id").replace("day", ""));
-//   console.log(daysOut);
-//   console.log();
-// });
-
 //create function to display forecast
 
-//make the uv index change color with an if statement
-
-//make the buttons on the right work
+//make the buttons on the left work
 
 //add last searched city to local storage so that city's weather will populate the forecast and current weather
 
-// uv index
-// <2 = green
-// class="badge badge-success"
-// 3-5 = yellow
-// class="badge badge-warning"
-// >6 = red
-// class="badge badge-danger"
+//https://openweathermap.org/img/w/{weathericonid}.png
